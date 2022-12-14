@@ -1,3 +1,13 @@
+ALX-school
+- 0x02-functions_nested_loops
+Basics of nested loops and 2D loops
+
+New commands / functions used:
+
+
+#include
+
+
 0-main.c
 Prints ``_putchar`` followed by a new line, and returns 0.
 

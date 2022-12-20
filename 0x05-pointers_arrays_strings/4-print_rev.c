@@ -1,5 +1,4 @@
-
-#include "coding.h"
+#include "main.h"
 
 /**
  * print_rev - function with 1 argument

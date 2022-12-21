@@ -1,6 +1,6 @@
-#ifndef HOLBERTON
+#ifndef MAIN
 
-#define HOLBERTON
+#define MAIN
 
 int _putchar(char c);
 

@@ -1,8 +1,6 @@
 1 A library is not a luxury but one of the necessities of life the static library libholberton.
  
-2 a containing all the functions listed
-
-Without libraries what have we? 
+2 a containing all the functions listedWithout libraries what have we? 
 
 3 We have no past and no future script called create_static_lib.sh that creates a static library called liball.a from all the .c files that are in the current directory.
 

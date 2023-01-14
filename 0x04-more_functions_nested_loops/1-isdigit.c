@@ -1,33 +1,23 @@
 #include "main.h"
 
-
-
 /**
+ * _isdigit - returns 1 if digit, 0 otherwise
+ * @c: Input parameter in ASCII
  *
- *  * _isdigit - function that checks for a digit (0 through 9).
- *
- *   * @c: input value to check.
- *
- *    * Return: int.
- *
- *     */
-
-
-
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 int _isdigit(int c)
-
 {
+	int i;
 
-		if (c >= 48 && c <= 57)
-
-				{
-
-							return (1);
-
-								}
-
-			else
-
-						return (0);
-
+	if ((c > 47) && (c < 58))
+	{
+		i = 1;
+	}
+	else
+	{
+		i = 0;
+	}
+	return (i);
 }

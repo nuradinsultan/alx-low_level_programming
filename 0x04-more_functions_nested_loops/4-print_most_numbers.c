@@ -1,39 +1,22 @@
-#include "main.h"
-
-
+#include "holberton.h"
 
 /**
+ * print_most_numbers - prints numbers from 0 to 9, but 2 and 4
+ * void: No Input Parameter
  *
- *  * print_most_numbers - function that prints the numbers, from 0 to 9.
- *
- *   *
- *
- *    * Return: nothing.
- *
- *     */
-
-
-
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 void print_most_numbers(void)
-
 {
+	int i;
 
-		int n = 0;
-
-
-
-			while (n < 10)
-
-					{
-
-								if (n != 2 && n != 4)
-
-												_putchar(n + '0');
-
-										n += 1;
-
-											}
-
-				_putchar('\n');
-
+	for (i = 48; i < 58; i++)
+	{
+		if ((i != 50) && (i != 52))
+		{
+			_putchar(i);
+		}
+	}
+	_putchar('\n');
 }

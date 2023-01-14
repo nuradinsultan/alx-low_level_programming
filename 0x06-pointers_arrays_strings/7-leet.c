@@ -1,63 +1,30 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
+ * leet - encodes string to 1337
+ * @s: string to encode
  *
- *  * leet - leet encoding
- *
- *   * Return: pointer to arr
- *
- *    * @s: string
- *
- *     */
-
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 char *leet(char *s)
-
 {
+	int i, j;
+	char leet[] = "aeotl";
+	char leet2[] = "AEOTL";
+	char leet3[] = "43071";
 
-		char low_up[5][2] = {{'a', 'A'}, {'e', 'E'}, {'o', 'O'},
-
-							 {'t', 'T'}, {'l', 'L'}};
-
-
-
-			char values[] = {'4', '3', '0', '7', '1'};
-
-
-
-				int i = 0, j;
-
-
-
-					while (s[i] != 0)
-
-							{
-
-										char c = s[i];
-
-
-
-												for (j = 0; j < 5; j++)
-
-															{
-
-																			if (c == low_up[j][0] || c == low_up[j][1])
-
-																							{
-
-																												s[i] = values[j];
-
-																																break;
-
-																																			}
-
-																					}
-
-
-
-														i++;
-
-															}
-
-						return (s);
-
+	j = 0;
+	while (*s != 0)
+	{
+		for (i = 0; i <= 4; i++)
+		{
+			if (*s == leet[i] || *s == leet2[i])
+				*s = leet3[i];
+		}
+		s++;
+		j++;
+	}
+	s = s - j;
+	return (s);
 }

@@ -1,67 +1,30 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
+ * leet - encodes string to 1337
+ * @s: string to encode
  *
- *  * cap_string - capitalize all words of string
- *
- *   * Return: void
- *
- *    * @s: string
- *
- *     */
-
-char *cap_string(char *s)
-
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+char *leet(char *s)
 {
+	int i, j;
+	char leet[] = "aeotl";
+	char leet2[] = "AEOTL";
+	char leet3[] = "43071";
 
-		int i = 0, j = 0;
-
-
-
-			char seps[] = {32, 10, 9, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
-
-
-
-				int size = sizeof(seps) / sizeof(seps[0]);
-
-
-
-					while (s[i] != 0)
-
-							{
-
-										char c = s[i];
-
-
-
-												for (j = 0; j < size; j++)
-
-															{
-
-																			if (c == seps[j] && s[i + 1] >= 'a' && s[i + 1] <= 'z')
-
-																							{
-
-																												s[i + 1] = 'A' + (s[i + 1] - 'a');
-
-																																break;
-
-																																			}
-
-																					}
-
-														i++;
-
-															}
-
-
-
-						if (s[0] >= 'a' && s[0] <= 'z')
-
-									s[0] = 'A' + (s[0] - 'a');
-
-
-
-							return (s);
-
+	j = 0;
+	while (*s != 0)
+	{
+		for (i = 0; i <= 4; i++)
+		{
+			if (*s == leet[i] || *s == leet2[i])
+				*s = leet3[i];
+		}
+		s++;
+		j++;
+	}
+	s = s - j;
+	return (s);
 }

@@ -1,30 +1,29 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * leet - encodes string to 1337
- * @s: string to encode
+ * cap_string - capitalizes string
+ * @s: string to change
  *
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-char *leet(char *s)
+char *cap_string(char *s)
 {
-	int i, j;
-	char leet[] = "aeotl";
-	char leet2[] = "AEOTL";
-	char leet3[] = "43071";
+	int i, j, b;
 
-	j = 0;
-	while (*s != 0)
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	if ((s[0] >= 97) && (s[0] <= 122))
+		s[0] = s[0] - 32;
+	for (j = 1; j < i; j++)
 	{
-		for (i = 0; i <= 4; i++)
-		{
-			if (*s == leet[i] || *s == leet2[i])
-				*s = leet3[i];
-		}
-		s++;
-		j++;
+		b = j - 1;
+		if (s[b] == 9 || s[b] == 10 || (s[b] > 31 && s[b] < 35)
+		    || s[b] == '(' || s[b] == ')' || s[b] == ',' || s[b] == '.'
+		    || s[b] == ';' || s[b] == '?' || s[b] == '{' || s[b] == '}')
+			if ((s[j] > 96) && (s[j] < 123))
+				s[j] = s[j] - 32;
 	}
-	s = s - j;
 	return (s);
 }

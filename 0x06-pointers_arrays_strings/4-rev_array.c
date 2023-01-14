@@ -1,44 +1,27 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
+ * reverse_array - reverses a string
+ * @a: array
+ * @n: number of elements in array
  *
- *  * reverse_array - concatenates two strings
- *
- *   * @a: array
- *
- *    * @n: number of elements in arr
- *
- *     * Return: void
- *
- *      */
-
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
 void reverse_array(int *a, int n)
-
 {
+	int j, l;
+	int tmp;
 
-		int c2 = 0;
-
-
-
-			while (c2 < n)
-
-					{
-
-								int t1 = a[c2];
-
-
-
-										int t2 = a[n - 1];
-
-
-
-												a[c2] = t2;
-
-														a[n - 1] = t1;
-
-														c2++												n--;
-
-										}
- 
-
+	j = 0;
+	l = n / 2;
+	n = n - 1;
+	while (n >= l)
+	{
+		tmp  = a[j];
+		a[j] = a[n];
+		a[n] = tmp;
+		n--;
+		j++;
+	}
 }

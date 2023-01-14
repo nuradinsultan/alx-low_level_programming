@@ -1,8 +1,8 @@
-#include "main.h"
+#include "holberton.h"
 /**
 * print_last_digit - print the last digit of a number..
 * @a: is a value that we going to evaluate.
-* Return: Always 0.
+* return: always 0.
 */
 
 int print_last_digit(int a)
@@ -20,4 +20,4 @@ int print_last_digit(int a)
 		_putchar(b + '0');
 	}
 	return (b);
-	}
+} 

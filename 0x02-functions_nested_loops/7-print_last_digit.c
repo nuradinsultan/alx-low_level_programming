@@ -1,13 +1,16 @@
 #include "main.h"
+#include <stdlib.h>
 /**
- * print_last_digit - prints the last digit of a numer.
- * @n: digit to find the last place of.
- * Return: The last digit.
- */
-int print_last_digit(int n)
+* print_last_digit - takes the last digit of a number
+* @r: number recieved
+*
+*Return: 1 a letter 0 otherwise
+*/
+int print_last_digit(int r)
 {
-	if (n < 0)
-		n = n * -1;
-	_putchar((n % 10) + '0');
-	return (n % 10);
+	int last;
+
+	last = abs(r % 10);
+	_putchar(last + '0');
+	return (last);
 }

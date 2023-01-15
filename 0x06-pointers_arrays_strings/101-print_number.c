@@ -1,23 +1,39 @@
-#include <stdio.h>
+#include "main.h"
 
-int main(void)
+/**
+ * print_number - prints a number with _putchar
+ * @n: Number to print
+ *
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
+ */
+void print_number(int n)
 {
-  int n;
-  int a[5];
-  int *p;
+	int ten, i, neg;
+	unsigned int digit, digit2;
 
-  a[2] = 1024;
-  p = &n;
-  /*
-   * write your line of code here...
-   * Remember:
-   * - you are not allowed to use a
-   * - you are not allowed to modify p
-   * - only one statement
-   * - you are not allowed to code anything else than this line of code
-   */
-  *(p + 5) = 98;
-  /* ...so that this prints 98\n */
-  printf("a[2] = %d\n", a[2]);
-  return (0);
+	ten = 1;
+	if (n < 0)
+	{
+		n = n * -1;
+		neg = 1;
+	}
+	digit = n;
+	digit2 = n;
+	while (digit >= 10)
+	{
+		digit = digit / 10;
+		ten = ten * 10;
+	}
+	if (neg == 1)
+	{
+		_putchar('-');
+	}
+	_putchar('0' + (digit2 / ten));
+	i = ten / 10;
+	while (i >= 1)
+	{
+		_putchar('0' + (digit2 / i) % 10);
+		i = i / 10;
+	}
 }

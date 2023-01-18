@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * _isdigit - this function says if a character is a digit
  * @n: a pointer to a string.

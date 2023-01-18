@@ -40,6 +40,7 @@ int _strlen(char *s)
 
 /**
  * errors - haddles errors for main
+ *Return: some value
  */
 void errors(void)
 {

@@ -39,8 +39,8 @@ int _strlen(char *s)
 }
 
 /**
- * errors - haddles errors for main
- *Return: some value
+ * _error - handler memory for an array using
+ * Return: pointer to the allocated memory
  */
 void errors(void)
 {
